@@ -1,0 +1,14 @@
+(vars [(i 1) (j 0) (acc 0)]
+	(while (<= i 100000)
+		(set j 1)
+		(set acc 0)
+		(while (< j i)
+		    (Iif (= (mod I j) 0)
+                (set acc (+ acc j))
+                (skip))
+			(set j (+ j 1)))
+		(Iif (= acc i)
+			(seq (print i) (print “\n”))
+			(skip))
+		(set i (+ i 1))))
+
